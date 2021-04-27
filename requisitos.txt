@@ -1,0 +1,79 @@
+/* Equipe: trabalhar em duplas ou até trios (no máximo)
+Objetivo: escrever a documentação (negócio/requisitos) e implementar o código de um sistema que permite o cálculo da área e perímetro de circunferências 
+(área PI.R^2. perímetro 2.PI.R) e retângulos (área BASE.ALTURA. perímetro 2.(BASE+ALTURA)).
+Cada membro da equipe deverá ficar responsável por uma parte da documentação e do código e deverá ser usado um repositório Git remoto compartilhado via GitHub.
+O repositório deverá ser informado ao professor.
+Use microcommits e branches para novas funcionalidades. */
+
+  - FÓRMULAS -
+  *CIRCULO = AREA: PI . R^2 * PERIMETRO: 2 . PI . R 
+  *RETANGULO = AREA: Base . Altura * PERIMETRO: 2 . (BASE + ALTURA);
+  
+NEGÓCIO:
+=======
+- Qual é o negócio?
+  O negócio envolve desenvolver uma aplicação onde o sistema efetue o cálculo de área e perímetro de circunferências, e de retângulos;
+  Um cálculo que pode causar algumas confusões em quem precisa executa-lo no dia a dia sem a eficácia do computador, pode ser feito em poucos minutos com apenas a determinação de algumas variáveis.
+  
+- Quais são os problemas/oportunidades?
+  Atualmente não é dificil encontrar programas que fazem essa conta pra você, porém aqui buscamos trazer o máximo de eficácia e dinamismo, com o minimo de interação com usuário mas sem deixar de fazer aquilo que o usuário precisa.
+  O problema é que na maioria dos casos das pessoas que precisam efetuar o tipo de cálculo, não tem o costume de procurar facilitadores na internet pois o papel acaba sendo até mais "fácil", mas que também pode ser menos eficiente deixando os erros menos evidentes. Com poucos "cliques" daremos o resultado solicitado pelo usuário conforme a solicitação;
+
+- Quais são os vocábulos de negócio?
+    - PI: PI é uma proporção numérica definida pela relação entre o perímetro de uma circunferência e seu diâmetro, sendo ela determinada por =~ 3,14;
+    - RAZÃO: A distância do centro do circulo a borda;
+  	- AREA DO CIRCULO: PI * R^2;
+    - PERIMETRO DO CIRCULO: 2 * PI * R
+    - BASE: Tamanho da base do retângulo;
+    - ALTURA: Altura da parede do retângulo;
+    - AREA DO RETANGULO: BASE * ALTURA;
+    - PERIMETRO DO RETANGULO: 2 * (BASE + ALTURA);
+    
+- Quais são os processos de negócio?
+  	Cálculo de IMC de uma pessoa.
+  --------------------------------------------
+  	A partir do valor do peso(Kg) e altura(m) da pessoa/paciente, deve ser calculado o IMC usando a 
+	formula de IMC da RN0001. Como exemplo, caso a pessoa/paciente tenha 85kg e 1.84m de altura ela 
+	terá um IMC de 25.11. Após o cálculo do IMC, deve-se deduzir em que classificação do paciente pelo 
+	seu sexo, conforme RN0002. Por fim, a partir do IMC, deve-se calcular quantos kilos o paciente deve 
+	perder para chegar na classificação - Adequado, que é igual ao Kg atual menos o  Kg ideal para a 
+	pessoa, de acordo com o calculo de RN0003. 
+
+- Quais são as regras de negócio?
+  	RN0001 - IMC = PESO / (ALTURA)^2
+
+
+  	RN0002 - HOMEM		MULHER		CLASSIFICAÇÃO
+		< 16		< 15.6		Magreza grau III
+		16.0 - 16.9	15.6 - 16.5	Magreza grau II
+		17.0 - 20.6	16.6 - 19.1	Magreza grau I
+		20.7 - 26.4	19.2 - 25.8	Adequado
+		26.5 - 27.8	25.9 - 27.3	Pré-obeso
+		27.9 - 31.1	27.4 - 32.3	Obesidade grau I
+		31.2 - 35.9	32.4 - 36.9	Obesidade grau II
+		>= 36		>= 37		Obesidade grau III
+
+	
+  	RN0003 - HOMEM 					   MULHER
+		 pesoIdeal = 23.5 * (ALTURA)^2		   pesoIdeal = 23.0 * (ALTURA)^2
+		 pesoPerder = PESO - pesoIdeal;	           pesoPerder = PESO - pesoIdeal;
+
+- Quem são os stakeholders?
+	Pessoas interessadas no IMC;
+	Nutricionistas;
+	Médicos;
+  ...
+
+REQUISITO:
+=========
+O sistema deve ser implementado em linguagem procedimental e orietada a objetos.
+
+- R0001 - O programa deve solicitar o sexo, peso e altura da pessoa.
+
+- R0002 - O programa deve mostrar o IMC e a classificação que a pessoa está.
+
+- R0003 - O programa deve mostrar quantos kilos a pessoa precisa perder para ter a classificação - Adequado.
+
+- R0004 - Se a pessoa já estiver na classificação - Adequado, é mostrado que ela está saudável, porém se ela 
+	estiver proxima a Magresa grau I ou Obesidade grau I é mostrado um aviso.
+
