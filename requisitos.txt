@@ -22,7 +22,7 @@ NEGÓCIO:
 - Quais são os vocábulos de negócio?
     - PI: PI é uma proporção numérica definida pela relação entre o perímetro de uma circunferência e seu diâmetro, sendo ela determinada por =~ 3,14;
     - RAZÃO: A distância do centro do circulo a borda;
-  	- AREA DO CIRCULO: PI * R^2;
+    - AREA DO CIRCULO: PI * R^2;
     - PERIMETRO DO CIRCULO: 2 * PI * R
     - BASE: Tamanho da base do retângulo;
     - ALTURA: Altura da parede do retângulo;
@@ -30,18 +30,14 @@ NEGÓCIO:
     - PERIMETRO DO RETANGULO: 2 * (BASE + ALTURA);
     
 - Quais são os processos de negócio?
-  	Cálculo de IMC de uma pessoa.
-  --------------------------------------------
-  	A partir do valor do peso(Kg) e altura(m) da pessoa/paciente, deve ser calculado o IMC usando a 
-	formula de IMC da RN0001. Como exemplo, caso a pessoa/paciente tenha 85kg e 1.84m de altura ela 
-	terá um IMC de 25.11. Após o cálculo do IMC, deve-se deduzir em que classificação do paciente pelo 
-	seu sexo, conforme RN0002. Por fim, a partir do IMC, deve-se calcular quantos kilos o paciente deve 
-	perder para chegar na classificação - Adequado, que é igual ao Kg atual menos o  Kg ideal para a 
-	pessoa, de acordo com o calculo de RN0003. 
+  	Cálculo dos perímetros de um retângulo ou circulo;
+	
+  	A partir do calculo das variaveis inseridas pelo usuário (razão, base, altura, etc) que dependendo da especificação da forma (retângulo ou círculo) fará o calculo determinado ao sistema pela forma. Após o cálculo do perímetro especificado, o sistema entregará de uma forma dinâmica as variáveis especificadas junto a resposta do sistema, também possibilitando o usuário a alterar o pi caso desejado (que será pré-inputado como 3,14).
 
 - Quais são as regras de negócio?
-  	RN0001 - IMC = PESO / (ALTURA)^2
-
+  	RN0001 - PERIMETRO DO CÍRCULO = (PI * R^2) * (2 * PI * R);
+	
+	RN0002 - PERIMETRO DO RETÂNGULO = (BASE * ALTURA) * (2 * (BASE + ALTURA));
 
   	RN0002 - HOMEM		MULHER		CLASSIFICAÇÃO
 		< 16		< 15.6		Magreza grau III
