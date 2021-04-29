@@ -39,37 +39,14 @@ NEGÓCIO:
 	
 	RN0002 - PERIMETRO DO RETÂNGULO = (BASE * ALTURA) * (2 * (BASE + ALTURA));
 
-  	RN0002 - HOMEM		MULHER		CLASSIFICAÇÃO
-		< 16		< 15.6		Magreza grau III
-		16.0 - 16.9	15.6 - 16.5	Magreza grau II
-		17.0 - 20.6	16.6 - 19.1	Magreza grau I
-		20.7 - 26.4	19.2 - 25.8	Adequado
-		26.5 - 27.8	25.9 - 27.3	Pré-obeso
-		27.9 - 31.1	27.4 - 32.3	Obesidade grau I
-		31.2 - 35.9	32.4 - 36.9	Obesidade grau II
-		>= 36		>= 37		Obesidade grau III
-
-	
-  	RN0003 - HOMEM 					   MULHER
-		 pesoIdeal = 23.5 * (ALTURA)^2		   pesoIdeal = 23.0 * (ALTURA)^2
-		 pesoPerder = PESO - pesoIdeal;	           pesoPerder = PESO - pesoIdeal;
+  	RN0003 - DEFINIÇÃO DE VARIÁVEIS PELO USUÁRIO
 
 - Quem são os stakeholders?
-	Pessoas interessadas no IMC;
-	Nutricionistas;
-	Médicos;
-  ...
+	- Usuários que precisam do cálculo de uma forma eficaz;
 
 REQUISITO:
-=========
-O sistema deve ser implementado em linguagem procedimental e orietada a objetos.
+- R0001 - O programa irá automaticamente inputar as fórmulas, e pi (que o usuário poderá também trocar);
 
-- R0001 - O programa deve solicitar o sexo, peso e altura da pessoa.
+- R0002 - O usuário indicará o tipo de fórmula e as variáveis;
 
-- R0002 - O programa deve mostrar o IMC e a classificação que a pessoa está.
-
-- R0003 - O programa deve mostrar quantos kilos a pessoa precisa perder para ter a classificação - Adequado.
-
-- R0004 - Se a pessoa já estiver na classificação - Adequado, é mostrado que ela está saudável, porém se ela 
-	estiver proxima a Magresa grau I ou Obesidade grau I é mostrado um aviso.
-
+- R0003 - O programa mostrará o resultado final junto as determinações de cada variável na tela final
